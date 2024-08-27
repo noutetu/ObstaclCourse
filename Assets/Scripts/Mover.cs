@@ -9,10 +9,21 @@ public class Mover : MonoBehaviour
 
     private void Start()
     {
-
+        PrintInstraction();
     }
 
     private void Update()
+    {
+        MovePlayer();
+    }
+
+    void PrintInstraction()
+    {
+        Debug.Log("Welcom to the game");
+        Debug.Log ("It's show time");
+    }
+
+    void MovePlayer()
     {
         float moveX = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
         float moveZ = Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed;
